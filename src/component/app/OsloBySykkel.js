@@ -3,241 +3,50 @@ import './OsloBySykkel.css';
 import TopBar from './../topbar/TopBar';
 import VisSykkelsStatus from '../vissykkelsstatus/VisSykkelsStatus';
 
-const testData = [
-  {  
-    "station_id":"623",
-    "name":"7 Juni Plassen",
-    "address":"7 Juni Plassen",
-    "lat":59.9150596,
-    "lon":10.7312715,
-    "capacity":15,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 8,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  },
-  {  
-    "station_id":"610",
-    "name":"Sotahjørnet",
-    "address":"Sotahjørnet",
-    "lat":59.9099822,
-    "lon":10.7914482,
-    "capacity":20,
-    "is_installed": 1,
-    "is_renting": 1,
-    "num_bikes_available": 4,
-    "num_docks_available": 9,
-    "last_reported": 1540219230,
-    "is_returning": 1,
-  }
+const stasjonInformasjonUrl = `https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json`;
+const stasjonStatusUrl = `https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json`;
 
-]
+const mergeArrayById = (array1, array2) =>
+array1.map(item1 => ({
+        ...item1,
+        ...array2.find((item2) => (item2.station_id === item1.station_id) && item2)
+    }));
 
 class OsloBySykkel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        stasjonDetaljertInformasjon: [],
+        erOppdatert : false
+    }
+}
+
+async componentDidMount() {
+    const stasjonInformasjonResponse = await fetch(stasjonInformasjonUrl);
+    const stasjonInformasjon = await stasjonInformasjonResponse.json();
+
+    const stasjonStatusResponse = await fetch(stasjonStatusUrl);
+    const stasjonStatus = await stasjonStatusResponse.json();
+
+    const stasjonDetaljertInformasjon = await mergeArrayById(stasjonInformasjon.data.stations, stasjonStatus.data.stations);
+
+    this.setState({
+      stasjonDetaljertInformasjon : stasjonDetaljertInformasjon,
+      erOppdatert : true
+    });
+}
 
   render() {
+    const { erOppdatert, stasjonDetaljertInformasjon } = this.state;
+
+  if(!erOppdatert) {
+      return(<div className="OsloBySykkel"> Lasting ...  </div>);
+    }
+
   return (
     <div className="OsloBySykkel">
         <TopBar />
-        <VisSykkelsStatus stations = {testData} />
+        <VisSykkelsStatus stations = {stasjonDetaljertInformasjon} />
     </div>
   );
   }
