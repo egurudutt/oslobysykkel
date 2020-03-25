@@ -15,6 +15,15 @@ const useStyles = makeStyles({
   },
 });
 
+const faaJaNei = (val) => {
+  return val ? "Ja" : "Nei";
+};
+
+const faaDato = (timestamp) => {
+  var dateObj = new Date(timestamp * 1000); 
+  return dateObj.toLocaleString(); 
+
+}
 
 export default function VisSykkelsStatus({stations}) {
   const classes = useStyles();
@@ -24,15 +33,16 @@ export default function VisSykkelsStatus({stations}) {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Station name</TableCell>
+          <TableCell>ID</TableCell>            
+            <TableCell>Station Name</TableCell>
+            <TableCell align="left">Available Bikes</TableCell>
+            <TableCell align="left">Available Docks</TableCell>
+            <TableCell align="left">Capacity</TableCell>
+            <TableCell align="left">Installed</TableCell>
+            <TableCell align="left">Renting</TableCell>
+            <TableCell align="left">Returning</TableCell>
+            <TableCell align="left">Last Reported</TableCell>
             <TableCell align="left">Adress</TableCell>
-            <TableCell align="left">capacity</TableCell>
-            <TableCell align="left">is_installed</TableCell>
-            <TableCell align="left">is_renting</TableCell>
-            <TableCell align="left">is_returning</TableCell>
-            <TableCell align="left">last_reported</TableCell>
-            <TableCell align="left">num_bikes_available</TableCell>
-            <TableCell align="left">num_docks_available</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -40,15 +50,16 @@ export default function VisSykkelsStatus({stations}) {
           {stations.map(
             row => (
               <TableRow key={row.name}>
-                <TableCell component="th" scope="row">{row.name}</TableCell>
-                <TableCell align="right">{row.address}</TableCell>
-                <TableCell align="right">{row.capacity}</TableCell>
-                <TableCell align="right">{row.is_installed}</TableCell>
-                <TableCell align="right">{row.is_renting}</TableCell>
-                <TableCell align="right">{row.is_returning}</TableCell>
-                <TableCell align="right">{row.last_reported}</TableCell>
+                <TableCell component="th" scope="row">{row.station_id}</TableCell>
+                <TableCell align="left">{row.name}</TableCell>
                 <TableCell align="right">{row.num_bikes_available}</TableCell>
                 <TableCell align="right">{row.num_docks_available}</TableCell>
+                <TableCell align="right">{row.capacity}</TableCell>
+                <TableCell align="center">{faaJaNei(row.is_installed)}</TableCell>
+                <TableCell align="center">{faaJaNei(row.is_renting)}</TableCell>
+                <TableCell align="center">{faaJaNei(row.is_returning)}</TableCell>
+                <TableCell align="center">{faaDato(row.last_reported)} </TableCell>
+                <TableCell align="left">{row.address}</TableCell>
               </TableRow>
             )
           )}

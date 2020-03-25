@@ -40,7 +40,7 @@ async componentDidMount() {
     const { erOppdatert, stasjonDetaljertInformasjon } = this.state;
 
   if(!erOppdatert) {
-      return(<div className="OsloBySykkel"> Lasting ...  </div>);
+      return(<div className="OsloBySykke1"> Lasting ...  </div>);
     }
 
   return (
