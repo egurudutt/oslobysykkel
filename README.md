@@ -24,6 +24,13 @@ Right now it is displaying list with pagination, in order to display complete li
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### It require to install npm service refer to [Doc] (https://github.com/facebook/create-react-app)
+
+## First time initilization
+
+### `npm install`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
