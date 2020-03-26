@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './OsloBySykkel.css';
-import TopBar from './../topbar/TopBar';
 import VisSykkelsStatus from '../vissykkelsstatus/VisSykkelsStatus';
 
 const stasjonInformasjonUrl = `https://gbfs.urbansharing.com/oslobysykkel.no/station_information.json`;
@@ -45,7 +44,6 @@ async componentDidMount() {
 
   return (
     <div className="OsloBySykkel">
-        <TopBar />
         <VisSykkelsStatus stations = {stasjonDetaljertInformasjon} />
     </div>
   );
