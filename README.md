@@ -26,7 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### It require to install npm service refer to [Doc] (https://github.com/facebook/create-react-app)
 
-## First time initilization
+## First time initialization
 
 ### `npm install`
 
